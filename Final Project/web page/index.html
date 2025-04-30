@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Restroom Accessibility</title>
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="bg-gray-100">
+    <div class="title-overlay">
+        <h1 class="text-xl font-semibold text-gray-800">NYC Restroom Accessibility Map</h1>
+    </div>
+    <div id="map">
+        <div id="access-filter" >
+            <strong>Filter Restrooms by Accessibility</strong>
+            <label><input type="checkbox" value="Fully Accessible" checked> Fully Accessible</label>
+            <label><input type="checkbox" value="Partially Accessible" checked> Partially Accessible</label>
+            <label><input type="checkbox" value="Not Accessible" checked> Not Accessible</label>
+          </div>
+        <div id="map-legend">
+            <strong>Legend</strong>
+            <div class="legend-item">
+              <span class="legend-symbol buffer-symbol"></span>
+              <span class="legend-label">800 m Buffer</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-symbol station-symbol"></span>
+              <span class="legend-label">Subway Stations</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-symbol restroom-symbol"></span>
+              <span class="legend-label">Restrooms</span>
+            </div>
+        </div>        
+    </div>
+
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
